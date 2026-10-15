@@ -329,37 +329,64 @@ function inicializarFormulario() {
 
 /* 6. Navegação para o início da página */
 function inicializarRetornoAoInicio() {
-  const linksInicio = document.querySelectorAll('a[href="#inicio"]');
+  const linksInicio = document.querySelectorAll(
+    'a[href="#inicio"], a[href="#topo"], a[href="#"]'
+  );
 
   linksInicio.forEach((link) => {
     link.addEventListener("click", (evento) => {
-      evento.preventDefault();
+      const destino = link.getAttribute("href");
 
-      const movimentoReduzido = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
+      // Trata apenas os links destinados ao topo da página.
+      if (
+        destino === "#inicio" ||
+        destino === "#topo" ||
+        (destino === "#" && link.textContent.trim().toLowerCase().includes("voltar"))
+      ) {
+        evento.preventDefault();
 
-      // Vai diretamente ao topo, sem depender da posição do cabeçalho.
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: movimentoReduzido ? "auto" : "smooth"
-      });
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "auto"
+        });
 
-      // Mantém o endereço sincronizado com o início da página.
-      if (window.location.hash !== "#inicio") {
-        history.replaceState(null, "", "#inicio");
+        history.replaceState(
+          null,
+          "",
+          window.location.pathname + window.location.search
+        );
       }
+    });
+  });
+}
+  const linksInicio = document.querySelectorAll(
+    'a[href="#inicio"], a[href="#topo"], a[href="#"]'
+  );
 
-      // Fecha o menu mobile após clicar na logo ou no link de retorno.
-      const botaoMenu = document.querySelector("#menuToggle");
-      const navegacao = document.querySelector("#mainNav");
+  linksInicio.forEach((link) => {
+    link.addEventListener("click", (evento) => {
+      const destino = link.getAttribute("href");
 
-      if (botaoMenu && navegacao) {
-        botaoMenu.setAttribute("aria-expanded", "false");
-        botaoMenu.setAttribute("aria-label", "Abrir menu");
-        navegacao.classList.remove("is-open");
-        document.body.classList.remove("menu-open");
+      // Trata apenas os links destinados ao topo da página.
+      if (
+        destino === "#inicio" ||
+        destino === "#topo" ||
+        (destino === "#" && link.textContent.trim().toLowerCase().includes("voltar"))
+      ) {
+        evento.preventDefault();
+
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "auto"
+        });
+
+        history.replaceState(
+          null,
+          "",
+          window.location.pathname + window.location.search
+        );
       }
     });
   });

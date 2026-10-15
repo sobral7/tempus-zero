@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="TEMPUS ZERO — uma experiência conceitual de relojoaria dedicada ao segundo eterno."
+  >
+  <meta name="theme-color" content="#0b0b0a">
+
+  <title>TEMPUS ZERO — O Segundo Eterno</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="inicio">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="TEMPUS ZERO — início">
+        <span class="brand-name">TEMPUS<span>ZERO</span></span>
+        <span class="brand-caption">O SEGUNDO ETERNO</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mainNav"
+        aria-label="Abrir menu"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+        <a href="#produto">O produto</a>
+        <a href="#experiencia">A experiência</a>
+        <a href="#manifesto">Manifesto</a>
+        <a href="#colecao">Coleção</a>
+      </nav>
+
+      <a class="header-cta" href="#aquisicao">Solicitar acesso</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero section" aria-labelledby="hero-title">
+      <div class="hero-grid container">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            RELOJOARIA CONCEITUAL · EDIÇÃO Nº 001
+          </p>
+
+          <h1 id="hero-title">
+            Um segundo.<br>
+            <span>Uma eternidade.</span>
+          </h1>
+
+          <p class="hero-description">
+            O tempo nunca parou por ninguém. Até agora, pelo menos,
+            ninguém teve a audácia de tentar comprá-lo.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#produto">
+              Descubra o impossível
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a class="text-link" href="#manifesto">
+              Conheça a proposta
+            </a>
+          </div>
+
+          <div class="hero-note">
+            <span class="hero-note-line" aria-hidden="true"></span>
+            <p>O instante mais raro não pode ser repetido.</p>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Apresentação conceitual do relógio">
+          <div class="hero-orbit hero-orbit-outer" aria-hidden="true"></div>
+          <div class="hero-orbit hero-orbit-inner" aria-hidden="true"></div>
+
+          <div class="watch-stage">
+            <div class="watch-placeholder">
+              <span class="watch-placeholder-label">TZ / 001</span>
+              <div class="watch-face" aria-hidden="true">
+                <span class="watch-marker marker-12"></span>
+                <span class="watch-marker marker-3"></span>
+                <span class="watch-marker marker-6"></span>
+                <span class="watch-marker marker-9"></span>
+                <span class="watch-hand watch-hand-hour"></span>
+                <span class="watch-hand watch-hand-minute"></span>
+                <span class="watch-hand watch-hand-second"></span>
+                <span class="watch-center"></span>
+              </div>
+              <span class="watch-placeholder-caption">O SEGUNDO ETERNO</span>
+            </div>
+          </div>
+
+          <div class="visual-index">
+            <span>01 / 03</span>
+            <span>CONCEITO ORIGINAL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-bottom container">
+        <span>PRECISÃO ALÉM DO POSSÍVEL</span>
+        <a href="#experiencia">ROLE PARA EXPLORAR ↓</a>
+        <span>CONCEITO FICTÍCIO · 2026</span>
+      </div>
+    </section>
+
+    <section
+      class="experience-section section"
+      id="experiencia"
+      aria-labelledby="experience-title"
+    >
+      <div class="container experience-grid">
+        <div class="section-intro">
+          <p class="eyebrow">01 — A EXPERIÊNCIA</p>
+          <h2 id="experience-title">
+            Você consegue<br>
+            <span>capturar o tempo?</span>
+          </h2>
+          <p>
+            Um segundo parece pouco. Até você tentar segurá-lo.
+            Faça sua tentativa e descubra o que acontece quando
+            a precisão encontra o impossível.
+          </p>
+        </div>
+
+        <div class="time-experiment">
+          <div class="experiment-topline">
+            <span>PROTOCOLO TZ-001</span>
+            <span class="experiment-status">
+              <span class="status-dot" aria-hidden="true"></span>
+              AGUARDANDO
+            </span>
+          </div>
+
+          <div
+            class="experiment-display"
+            id="experimentDisplay"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            <span class="experiment-number" id="experimentNumber">00.00</span>
+            <span class="experiment-unit">SEGUNDOS</span>
+          </div>
+
+          <p class="experiment-message" id="experimentMessage">
+            Pressione iniciar e tente parar o contador exatamente em 1 segundo.
+          </p>
+
+          <div class="experiment-actions">
+            <button class="button button-primary" id="startExperiment" type="button">
+              Iniciar experiência
+            </button>
+            <button class="button button-secondary" id="stopExperiment" type="button" disabled>
+              Capturar instante
+            </button>
+          </div>
+
+          <p class="experiment-disclaimer">
+            Uma experiência interativa de percepção do tempo.
+            Nenhum segundo real pode ser congelado.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-section section" id="produto" aria-labelledby="product-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">02 — A PEÇA</p>
+            <h2 id="product-title">O Segundo Eterno</h2>
+          </div>
+          <p class="section-heading-note">
+            Uma peça conceitual para quem deseja possuir aquilo
+            que sempre escapa.
+          </p>
+        </div>
+
+        <div class="product-layout">
+          <div class="product-art">
+            <div class="product-art-frame">
+              <span class="product-art-index">TZ / 001</span>
+              <div class="product-watch-illustration" aria-hidden="true">
+                <div class="product-watch-strap"></div>
+                <div class="product-watch-case">
+                  <div class="product-watch-dial">
+                    <span class="product-dial-hand"></span>
+                    <span class="product-dial-center"></span>
+                  </div>
+                </div>
+              </div>
+              <span class="product-art-caption">DESIGN STUDY — 001</span>
+            </div>
+          </div>
+
+          <div class="product-details">
+            <p class="eyebrow">EDIÇÃO CONCEITUAL Nº 001</p>
+            <h3>O instante que não termina.</h3>
+            <p class="product-description">
+              Uma interpretação artística da vontade humana de controlar
+              o tempo. Seu desenho celebra a precisão mecânica e questiona
+              o limite entre o que podemos medir e o que podemos possuir.
+            </p>
+
+            <dl class="spec-list">
+              <div>
+                <dt>Identificação</dt>
+                <dd>TZ-001</dd>
+              </div>
+              <div>
+                <dt>Conceito</dt>
+                <dd>Tempo permanente</dd>
+              </div>
+              <div>
+                <dt>Disponibilidade</dt>
+                <dd>Edição fictícia limitada</dd>
+              </div>
+              <div>
+                <dt>Natureza</dt>
+                <dd>Objeto conceitual</dd>
+              </div>
+            </dl>
+
+            <div class="product-price">
+              <span>VALOR CONCEITUAL</span>
+              <strong>R$ 99.999,00</strong>
+            </div>
+
+            <p class="price-note">
+              Valor ilustrativo para fins de apresentação criativa.
+              Não representa uma oferta comercial real.
+            </p>
+
+            <a class="button button-primary" href="#aquisicao">
+              Conheça a edição
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto-section section" id="manifesto" aria-labelledby="manifesto-title">
+      <div class="container manifesto-inner">
+        <p class="eyebrow">03 — O MANIFESTO</p>
+
+        <h2 id="manifesto-title">
+          Não fabricamos tempo.<br>
+          <span>Questionamos seus limites.</span>
+        </h2>
+
+        <p class="manifesto-copy">
+          Passamos a vida medindo segundos, contando minutos e esperando
+          horas. E, ainda assim, o instante que mais desejamos guardar
+          sempre pertence ao passado.
+        </p>
+
+        <p class="manifesto-signature">TEMPUS ZERO — O impossível em sua forma mais precisa.</p>
+      </div>
+    </section>
+
+    <section class="collection-section section" id="colecao" aria-labelledby="collection-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">04 — ALÉM DO INSTANTE</p>
+            <h2 id="collection-title">Uma coleção impossível.</h2>
+          </div>
+          <p class="section-heading-note">
+            Três maneiras de desafiar aquilo que não pode ser possuído.
+          </p>
+        </div>
+
+        <div class="collection-grid">
+          <article class="collection-card">
+            <div class="collection-card-art collection-art-one" aria-hidden="true">
+              <span>TZ / 002</span>
+              <div class="collection-symbol symbol-hourglass"></div>
+            </div>
+            <div class="collection-card-content">
+              <p class="eyebrow">PEÇA CONCEITUAL Nº 002</p>
+              <h3>The Lost Minute</h3>
+              <p>O minuto que você nunca percebeu que perdeu.</p>
+              <button
+                class="text-link product-detail-trigger"
+                type="button"
+                data-product="lost-minute"
+                aria-haspopup="dialog"
+              >
+                Descobrir a peça ↗
+              </button>
+            </div>
+          </article>
+
+          <article class="collection-card">
+            <div class="collection-card-art collection-art-two" aria-hidden="true">
+              <span>TZ / 003</span>
+              <div class="collection-symbol symbol-circle"></div>
+            </div>
+            <div class="collection-card-content">
+              <p class="eyebrow">PEÇA CONCEITUAL Nº 003</p>
+              <h3>The Still Hour</h3>
+              <p>Uma hora inteira sem que o mundo avance.</p>
+              <button
+                class="text-link product-detail-trigger"
+                type="button"
+                data-product="still-hour"
+                aria-haspopup="dialog"
+              >
+                Descobrir a peça ↗
+              </button>
+            </div>
+          </article>
+
+          <article class="collection-card">
+            <div class="collection-card-art collection-art-three" aria-hidden="true">
+              <span>TZ / 004</span>
+              <div class="collection-symbol symbol-line"></div>
+            </div>
+            <div class="collection-card-content">
+              <p class="eyebrow">PEÇA CONCEITUAL Nº 004</p>
+              <h3>The First Moment</h3>
+              <p>O começo de algo que nunca deveria acabar.</p>
+              <button
+                class="text-link product-detail-trigger"
+                type="button"
+                data-product="first-moment"
+                aria-haspopup="dialog"
+              >
+                Descobrir a peça ↗
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="acquisition-section section" id="aquisicao" aria-labelledby="acquisition-title">
+      <div class="container acquisition-grid">
+        <div class="acquisition-copy">
+          <p class="eyebrow">05 — ACESSO À COLEÇÃO</p>
+          <h2 id="acquisition-title">
+            Alguns instantes<br>
+            <span>merecem ser eternos.</span>
+          </h2>
+          <p>
+            Conheça o universo TEMPUS ZERO e receba informações
+            sobre nossas peças conceituais.
+          </p>
+          <p class="acquisition-disclaimer">
+            Projeto criativo fictício. O formulário é demonstrativo e
+            não envia dados para um servidor.
+          </p>
+        </div>
+
+        <form class="acquisition-form" id="acquisitionForm">
+          <div class="form-heading">
+            <span>FORMULÁRIO TZ-001</span>
+            <span>01 / 01</span>
+          </div>
+
+          <div class="form-field">
+            <label for="visitorName">Nome</label>
+            <input
+              type="text"
+              id="visitorName"
+              name="name"
+              placeholder="Como devemos chamar você?"
+              autocomplete="name"
+              required
+              maxlength="80"
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="visitorEmail">E-mail</label>
+            <input
+              type="email"
+              id="visitorEmail"
+              name="email"
+              placeholder="voce@exemplo.com"
+              autocomplete="email"
+              required
+              maxlength="254"
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="visitorInterest">O que mais desperta seu interesse?</label>
+            <select id="visitorInterest" name="interest" required>
+              <option value="">Selecione uma opção</option>
+              <option value="eternal-second">O Segundo Eterno</option>
+              <option value="collection">Coleção conceitual</option>
+              <option value="experience">Experiência interativa</option>
+            </select>
+          </div>
+
+          <button class="button button-primary form-submit" type="submit">
+            Solicitar acesso conceitual
+            <span aria-hidden="true">↗</span>
+          </button>
+
+          <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="#inicio" aria-label="TEMPUS ZERO — voltar ao início">
+        <span class="brand-name">TEMPUS<span>ZERO</span></span>
+        <span class="brand-caption">O SEGUNDO ETERNO</span>
+      </a>
+
+      <p>O impossível em sua forma mais precisa.</p>
+
+      <a class="text-link" href="#inicio">Voltar ao início ↑</a>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 TEMPUS ZERO — CIMATEC JR</span>
+      <span>PROSEL26.2-NPCP-CIMATECJR</span>
+    </div>
+  </footer>
+
+  <dialog class="product-dialog" id="productDialog" aria-labelledby="dialogTitle">
+    <div class="dialog-content">
+      <div class="dialog-topline">
+        <span class="eyebrow">ARQUIVO TEMPUS ZERO</span>
+        <button class="dialog-close" id="dialogClose" type="button" aria-label="Fechar detalhes">
+          ×
+        </button>
+      </div>
+
+      <p class="dialog-index" id="dialogIndex">PEÇA CONCEITUAL</p>
+      <h2 id="dialogTitle">Nome do produto</h2>
+      <p class="dialog-description" id="dialogDescription"></p>
+
+      <a class="button button-primary" id="dialogAction" href="#aquisicao">
+        Conhecer a coleção
+      </a>
+    </div>
+  </dialog>
+
+</body>
+</html>

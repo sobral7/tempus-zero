@@ -270,6 +270,7 @@ function inicializarDialogoColecao() {
   });
 }
 
+
 /* 5. Formulário demonstrativo: não envia dados ao servidor */
 function inicializarFormulario() {
   const formulario = document.querySelector("#acquisitionForm");
@@ -318,70 +319,43 @@ function inicializarFormulario() {
 
     const primeiroNome = nome.split(/\s+/)[0];
 
+    const opcaoSelecionada =
+      campoInteresse.selectedOptions?.[0];
+
+    const produto = opcaoSelecionada
+      ? opcaoSelecionada.textContent.trim()
+      : campoInteresse.value.trim();
+
     feedback.textContent =
-      `Obrigado, ${primeiroNome}! Sua solicitação foi registrada ` +
-      "apenas nesta demonstração. Nenhum dado foi enviado ou armazenado.";
+      `Obrigado, ${primeiroNome}! Sua solicitação sobre ` +
+      `"${produto || "o TEMPUS ZERO"}" foi registrada. ` +
+      "Em breve entraremos em contato. Enquanto isso, continue explorando a experiência.";
 
     feedback.dataset.state = "success";
+    feedback.setAttribute("role", "status");
+
     formulario.reset();
   });
 }
 
+
 /* 6. Navegação para o início da página */
+
 function inicializarRetornoAoInicio() {
   const linksInicio = document.querySelectorAll(
-    'a[href="#inicio"], a[href="#topo"], a[href="#"]'
+    '.brand[href="#inicio"], a[href="#inicio"].text-link'
   );
 
   linksInicio.forEach((link) => {
     link.addEventListener("click", (evento) => {
-      const destino = link.getAttribute("href");
+      evento.preventDefault();
 
-      // Trata apenas os links destinados ao topo da página.
-      if (
-        destino === "#inicio" ||
-        destino === "#topo" ||
-        (destino === "#" && link.textContent.trim().toLowerCase().includes("voltar"))
-      ) {
-        evento.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
 
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: "auto"
-        });
-
-        history.replaceState(
-          null,
-          "",
-          window.location.pathname + window.location.search
-        );
-      }
-    });
-  });
-}
-  const linksInicio = document.querySelectorAll(
-    'a[href="#inicio"], a[href="#topo"], a[href="#"]'
-  );
-
-  linksInicio.forEach((link) => {
-    link.addEventListener("click", (evento) => {
-      const destino = link.getAttribute("href");
-
-      // Trata apenas os links destinados ao topo da página.
-      if (
-        destino === "#inicio" ||
-        destino === "#topo" ||
-        (destino === "#" && link.textContent.trim().toLowerCase().includes("voltar"))
-      ) {
-        evento.preventDefault();
-
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: "auto"
-        });
-
+      if (window.location.hash) {
         history.replaceState(
           null,
           "",
@@ -392,4 +366,7 @@ function inicializarRetornoAoInicio() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", inicializarRetornoAoInicio);
+document.addEventListener(
+  "DOMContentLoaded",
+  inicializarRetornoAoInicio
+);

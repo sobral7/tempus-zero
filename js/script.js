@@ -328,8 +328,8 @@ function inicializarFormulario() {
 
     feedback.textContent =
       `Obrigado, ${primeiroNome}! Sua solicitação sobre ` +
-      `"${produto || "o TEMPUS ZERO"}" foi registrada. ` +
-      "Em breve entraremos em contato. Enquanto isso, continue explorando a experiência.";
+      `"${produto || "o TEMPUS ZERO"}" foi registrada nesta demonstração. ` +
+      "Nenhum dado foi enviado ou armazenado. Continue explorando a experiência.";
 
     feedback.dataset.state = "success";
     feedback.setAttribute("role", "status");

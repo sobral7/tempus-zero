@@ -66,7 +66,13 @@ O formulário é exclusivamente demonstrativo. Os dados preenchidos não são en
 Projeto conceitual em desenvolvimento, com landing page interativa implementada em HTML, CSS e JavaScript.
 
 ---
+## Acesse o projeto
 
+**Site publicado:** [TEMPUS ZERO — O Segundo Eterno](https://sobral7.github.io/tempus-zero/)
+
+**Repositório:** https://github.com/sobral7/tempus-zero
+
+---
 **TEMPUS ZERO — O Segundo Eterno**
 
 *Precisão além do possível.*

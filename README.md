@@ -26,6 +26,7 @@ O projeto foi desenvolvido para explorar a construção de interfaces web, a exp
 - CSS3 — identidade visual, layout, animações e responsividade.
 - JavaScript — interações, navegação e funcionalidades dinâmicas.
 - Git e GitHub — controle de versão e gerenciamento do código.
+- Figma Make (prototipação e design)
 
 ## Estrutura do projeto
 
@@ -68,9 +69,11 @@ Projeto conceitual em desenvolvimento, com landing page interativa implementada 
 ---
 ## Acesse o projeto
 
-**Site publicado:** [TEMPUS ZERO — O Segundo Eterno](https://sobral7.github.io/tempus-zero/)
+**Site publicado (GitHub Pages):** [TEMPUS ZERO — O Segundo Eterno](https://sobral7.github.io/tempus-zero/)
 
 **Repositório:** https://github.com/sobral7/tempus-zero
+
+**Versão visual** (Figma Make): https://dab-crayon-42886654.figma.site/
 
 ---
 **TEMPUS ZERO — O Segundo Eterno**
